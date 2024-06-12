@@ -1,14 +1,16 @@
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
-import IconFactory from "./componentes/icons";
+import IconFactory from "./componentes/IconFactory";
 import TextFactory from "./componentes/TextFactory";
 import ButtonFactory from "./componentes/ButtonFactory";
+import CardFactory from "./componentes/CardFactory";
 
 export default function Home():React.JSX.Element {
   return (
-    <>
+    <section className="border-x-2 border-red-100 dark:border-stone-900">
       <Header />
-      <main className="mt-12">
+      <main className="pt-12 bg-white dark:bg-black pb-8">
+        {/* Texto superior y leyendas */}
         <section className="block md:flex md:justify-center text-black dark:text-white bg-white dark:bg-black">
             <article className="flex items-center justify-center md:justify-end md:mr-4 my-4">
               <div className="block md:hidden mr-4 md:mr-0">
@@ -26,22 +28,27 @@ export default function Home():React.JSX.Element {
               <p className="font-bold text-xl w-1/2">Entregamos el mismo día de la compra en el área metropolitana.</p>
             </article>
         </section>
-
-        <section className="flex justify-evenly items-center py-12">
+        {/* Texto cambiante y botones */}
+        <section className="block text-center md:flex md:justify-evenly items-center py-12">
             <article >
-              <TextFactory.RainbowText size="text-xl" mdsize="text-4xl" text="Regalos geniales" from="from-red-800" to="to-pink-500" dark_from="from-pink-600" dark_to="to-red-900" />
+              <TextFactory.RainbowText size="text-3xl" mdsize="text-4xl" text="Regalos geniales" from="from-red-800" to="to-pink-500" dark_from="from-pink-600" dark_to="to-red-900" />
             </article>
-            <article className="flex">
-              <ButtonFactory.SpaceButton text="Catálogo" heigth="h-12" width="w-48" mx="mx-2" />
-              <ButtonFactory.SpaceButton text="Contáctenos" heigth="h-12" width="w-48" mx="mx-2" />
+            <article className="block items-center md:flex">
+              <ButtonFactory.SpaceButton text="Catálogo" heigth="h-12" width="w-48" mx="m-auto md:mx-2" my="my-2 md:my-0" />
+              <ButtonFactory.SpaceButton text="Contáctenos" heigth="h-12" width="w-48" mx="m-auto md:mx-2" my="my-2 md:my-0" />
             </article>
         </section>
-        <section>
-          
+        {/* Productos seleccionados aleatoriamente */}
+        <section className="flex justify-evenly my-6">
+          <CardFactory.PresentationCard size="md:h-112 w-80" />
+          <CardFactory.PresentationCard size="md:h-112 w-80" />
+          <CardFactory.PresentationCard size="md:h-112 w-80" />
+          <CardFactory.PresentationCard size="md:h-112 w-80" />
+
 
         </section>
       </main>
       <Footer />
-    </>
+    </section>
   );
 }

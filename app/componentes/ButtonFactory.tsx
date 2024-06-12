@@ -4,13 +4,14 @@ interface ButtonProps{
     text:string,
     heigth:string,
     width:string,
-    mx:string
+    mx:string,
+    my:string
 }
 
 class ButtonFactory{
-    public static SpaceButton({text, heigth, width, mx}:ButtonProps):React.ReactNode{
+    public static SpaceButton({text, heigth, width, mx, my}:ButtonProps):React.ReactNode{
         return(
-            <button className={`btn-space ${heigth} ${width} ${mx}`} type="button">
+            <button className={`btn-space ${heigth} ${width} ${mx} ${my}`} type="button">
                 <strong>{text}</strong>
                 <div id="container-stars">
                     <div id="stars"></div>

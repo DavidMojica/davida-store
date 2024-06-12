@@ -14,11 +14,14 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      spacing:{
+        '112': '28rem'
+      }
     },
     fontFamily:{
       libre_franklin:['var(--font-libre-franklin)']
     },
-
+    
   },
   plugins: [],
 };
