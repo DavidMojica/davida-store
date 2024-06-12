@@ -1,9 +1,10 @@
-import { FaWhatsapp, FaGithub, FaFacebook } from "react-icons/fa6";
+import { FaWhatsapp, FaGithub, FaFacebook, FaMoneyBill, FaClock } from "react-icons/fa6";
 
 interface IconProps{
     size: string,
     padding: string,
 }
+
 class IconFactory{
     public static Whatsapp({size, padding}:IconProps):React.ReactNode{
         return(
@@ -26,6 +27,21 @@ class IconFactory{
             </>
         )
     }
+    public static Bill({size, padding}:IconProps):React.ReactNode{
+        return(
+            <>
+                <FaMoneyBill className={`${size} ${padding} rounded-xl text-green-700`} />
+            </>
+        )
+    }
+    public static Time({size, padding}:IconProps):React.ReactNode{
+        return(
+            <>
+                <FaClock className={`${size} ${padding} text-yellow-500`} />
+            </>
+        )
+    }
+
 }
 
 export default IconFactory;
