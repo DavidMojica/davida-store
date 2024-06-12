@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import IconFactory from './icons';
+import IconFactory from './IconFactory';
 
 const Footer = ():React.JSX.Element => {
   return (
