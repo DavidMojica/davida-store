@@ -29,8 +29,6 @@ export default function Home():React.JSX.Element {
 
         <section className="flex justify-evenly items-center py-12">
             <article >
-              {/* <img src="/logo.png" alt="logo_light" className='block dark:hidden size-96 rounded-full m-auto ' />
-              <img src="/logo_dark.png" alt="logo_dark" className=' hidden dark:block size-96 rounded-full m-auto ' /> */}
               <TextFactory.RainbowText size="text-xl" mdsize="text-4xl" text="Regalos geniales" from="from-red-800" to="to-pink-500" dark_from="from-pink-600" dark_to="to-red-900" />
             </article>
             <article className="flex">
@@ -38,7 +36,10 @@ export default function Home():React.JSX.Element {
               <ButtonFactory.SpaceButton text="Contáctenos" heigth="h-12" width="w-48" mx="mx-2" />
             </article>
         </section>
+        <section>
+          
 
+        </section>
       </main>
       <Footer />
     </>
