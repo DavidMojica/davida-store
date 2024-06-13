@@ -34,12 +34,12 @@ export default function Home():React.JSX.Element {
               <TextFactory.RainbowText size="text-3xl" mdsize="text-4xl" text="Regalos geniales" from="from-red-800" to="to-pink-500" dark_from="from-pink-600" dark_to="to-red-900" />
             </article>
             <article className="block items-center md:flex">
-              <ButtonFactory.SpaceButton text="Catálogo" heigth="h-12" width="w-48" mx="m-auto md:mx-2" my="my-2 md:my-0" />
-              <ButtonFactory.SpaceButton text="Contáctenos" heigth="h-12" width="w-48" mx="m-auto md:mx-2" my="my-2 md:my-0" />
+              <ButtonFactory.SpaceButton text="Catálogo" size="h-12 w-48" margin="m-auto md:mx-2 my-2 md:my-0"  />
+              <ButtonFactory.SpaceButton text="Contáctenos" size="h-12 w-48" margin="m-auto md:mx-2 my-2 md:my-0" />
             </article>
         </section>
         {/* Productos seleccionados aleatoriamente */}
-        <section className="flex justify-evenly my-6">
+        <section className="flex flex-wrap justify-evenly my-6">
           <CardFactory.PresentationCard size="md:h-112 w-80" />
           <CardFactory.PresentationCard size="md:h-112 w-80" />
           <CardFactory.PresentationCard size="md:h-112 w-80" />
