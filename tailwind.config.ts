@@ -16,7 +16,9 @@ const config: Config = {
       },
       spacing:{
         '97': '390px',
-        '112': '28rem'
+        '112': '28rem',
+        'expand-sm': '108%',
+        'expand-md': '110%'
       }
     },
     fontFamily:{

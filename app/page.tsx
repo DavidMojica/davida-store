@@ -1,11 +1,19 @@
+'use client';
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
 import IconFactory from "./componentes/IconFactory";
 import TextFactory from "./componentes/TextFactory";
 import ButtonFactory from "./componentes/ButtonFactory";
 import CardFactory from "./componentes/CardFactory";
+import { PresentationProduct } from "./componentes/models/Product";
 
 export default function Home():React.JSX.Element {
+  //---------Instancias de productos de presentacion---------//
+  const ptt_RopaDama = new PresentationProduct('ptt_ropadama.jpeg', '','Ropa de dama');
+  const ptt_Accesorios = new PresentationProduct('ptt_accesorios.jpeg', '', 'Accesorios');
+  const ptt_Tecnologia = new PresentationProduct('ptt_tecnologia.jpg', '', 'Tecnología');
+  const ptt_Otros = new PresentationProduct('ptt_otros.jpg', '', 'Otros...');
+
   return (
     <section className="border-x-2 border-red-100 dark:border-stone-900">
       <Header />
@@ -40,10 +48,10 @@ export default function Home():React.JSX.Element {
         </section>
         {/* Productos seleccionados aleatoriamente */}
         <section className="flex flex-wrap justify-evenly my-6">
-          <CardFactory.PresentationCard size="md:h-112 w-80" />
-          <CardFactory.PresentationCard size="md:h-112 w-80" />
-          <CardFactory.PresentationCard size="md:h-112 w-80" />
-          <CardFactory.PresentationCard size="md:h-112 w-80" />
+          <CardFactory.PresentationCard size="md:h-112 w-80" margin="px-2 py-4" product={ptt_RopaDama} />
+          <CardFactory.PresentationCard size="md:h-112 w-80" margin="px-2 py-4" product={ptt_Accesorios} />
+          <CardFactory.PresentationCard size="md:h-112 w-80" margin="px-2 py-4" product={ptt_Tecnologia} />
+          <CardFactory.PresentationCard size="md:h-112 w-80" margin="px-2 py-4" product={ptt_Otros} />
 
 
         </section>
