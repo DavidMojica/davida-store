@@ -13,7 +13,7 @@
   .btn-blank-txt {
     z-index: 1;
     font-weight: 800;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
   }
   
   .type1::after {

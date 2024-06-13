@@ -42,7 +42,7 @@ class CardFactory{
                                 <div className="card-magic-info overflow-hidden">
                                     
                                     <section className='h-97 relative w-expand-sm'>
-                                        <img src={`${product.getPresentationImageUrl()}`} alt="example_image" className='absolute -top-3 -left-3 w-expand-sm h-expand-md rounded-b-lg' data-atropos-offset="-3.1" />
+                                        <img src={`${product.getPresentationImageUrl()}`} alt="example_image" className='absolute -top-3 -left-3 w-expand-sm h-expand-md rounded-b-lg' data-atropos-offset="3.1" />
                                         <div className='absolute bottom-4 mx-auto left-1/2 transform -translate-x-1/2'>
                                             <Link href={`${product.getLinkString()}`}>
                                                 <ButtonFactory.BlankButton text={`${product.getCategory()}`} margin='m-0' size='h-8 w-48' />
