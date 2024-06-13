@@ -1,11 +1,22 @@
+'use client';
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
 import IconFactory from "./componentes/IconFactory";
 import TextFactory from "./componentes/TextFactory";
 import ButtonFactory from "./componentes/ButtonFactory";
 import CardFactory from "./componentes/CardFactory";
+import { PresentationProduct } from "./componentes/models/Product";
+import TextRotator from "./componentes/TextRotator";
+
 
 export default function Home():React.JSX.Element {
+  //---------Instancias de productos de presentacion---------//
+  const ptt_RopaDama = new PresentationProduct('ptt_ropadama.jpeg', '','Ropa de dama');
+  const ptt_Accesorios = new PresentationProduct('ptt_accesorios.jpeg', '', 'Accesorios');
+  const ptt_Tecnologia = new PresentationProduct('ptt_tecnologia.jpg', '', 'Tecnología');
+  const ptt_Otros = new PresentationProduct('ptt_otros.jpg', '', 'Otros...');
+
+
   return (
     <section className="border-x-2 border-red-100 dark:border-stone-900">
       <Header />
@@ -29,26 +40,27 @@ export default function Home():React.JSX.Element {
             </article>
         </section>
         {/* Texto cambiante y botones */}
-        <section className="block text-center md:flex md:justify-evenly items-center py-12">
+        <section className="block text-center items-center py-12">
             <article >
-              <TextFactory.RainbowText size="text-3xl" mdsize="text-4xl" text="Regalos geniales" from="from-red-800" to="to-pink-500" dark_from="from-pink-600" dark_to="to-red-900" />
+              <TextRotator.RainbowTextRotator />
             </article>
-            <article className="block items-center md:flex">
-              <ButtonFactory.SpaceButton text="Catálogo" heigth="h-12" width="w-48" mx="m-auto md:mx-2" my="my-2 md:my-0" />
-              <ButtonFactory.SpaceButton text="Contáctenos" heigth="h-12" width="w-48" mx="m-auto md:mx-2" my="my-2 md:my-0" />
+            <article className="block items-center md:flex justify-center pb-2 pt-4">
+              <ButtonFactory.SpaceButton text="Catálogo" size="h-12 w-48" margin="m-auto md:mx-2 my-2 md:my-0"  />
+              <ButtonFactory.SpaceButton text="Contáctenos" size="h-12 w-48" margin="m-auto md:mx-2 my-2 md:my-0" />
             </article>
         </section>
         {/* Productos seleccionados aleatoriamente */}
-        <section className="flex justify-evenly my-6">
-          <CardFactory.PresentationCard size="md:h-112 w-80" />
-          <CardFactory.PresentationCard size="md:h-112 w-80" />
-          <CardFactory.PresentationCard size="md:h-112 w-80" />
-          <CardFactory.PresentationCard size="md:h-112 w-80" />
+        <section className="flex flex-wrap justify-evenly">
+          <CardFactory.PresentationCard size="md:h-112 w-80" margin="px-2 py-4" product={ptt_RopaDama} />
+          <CardFactory.PresentationCard size="md:h-112 w-80" margin="px-2 py-4" product={ptt_Accesorios} />
+          <CardFactory.PresentationCard size="md:h-112 w-80" margin="px-2 py-4" product={ptt_Tecnologia} />
+          <CardFactory.PresentationCard size="md:h-112 w-80" margin="px-2 py-4" product={ptt_Otros} />
 
 
         </section>
       </main>
       <Footer />
+
     </section>
   );
 }
