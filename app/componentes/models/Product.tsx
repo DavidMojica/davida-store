@@ -19,7 +19,7 @@ export class PresentationProduct{
     }
 }
 
-abstract class Product{
+export abstract class Product{
     protected Name:string;
     protected Description:string;
     protected Price:number;
@@ -56,7 +56,7 @@ abstract class Product{
     }
 }
 
-export class Clothing extends Product{ //ropa
+export class Clothing extends Product{ 
     private Size:string;
     private Color:string;
     private Material:string;
