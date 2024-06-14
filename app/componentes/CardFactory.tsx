@@ -4,11 +4,12 @@ import '../styles/magic_card.css';
 import ButtonFactory from './ButtonFactory';
 import Atropos from 'atropos';
 import Link from 'next/link';
+import { Clothing } from './models/Product';
+import ProductSwiper from './ProductSwiper';
 
-
-interface ProductCardProps{
+interface ClothingCardProps{
     size:string,
-    // product:Product;
+    product:Clothing;
 }
 
 interface PresentationProductProps{
@@ -59,13 +60,37 @@ class CardFactory{
     }
 
     //------------Card to detail the product------------//
-    public static ProductCard = ({size}:ProductCardProps):React.ReactNode => {
-        return (
-        <article className={`card-magic ${size}`}>
-            <div className="card-magic-info">
+    public static ClothingCard = ({size, product}:ClothingCardProps):React.ReactNode => {
+        useEffect(() =>{
+            const cardElements = document.querySelectorAll('.a-card');
+            Array.prototype.forEach.call(cardElements, (element: Element) => {
+                if (element instanceof HTMLElement) {
+                    Atropos({
+                        el: element,
+                        activeOffset: 100,
+                        
+                    });
+                }
+            });
+        }, []);
 
-            </div>
-        </article>
+        return (
+            <section className={`a-card ${size} `} >
+                <article className='atropos-scale'>
+                    <article className='atropos-rotate'>
+                        <article className='atropos-inner'>
+                            <section className='card-magic '>
+                                <div className="card-magic-info overflow-hidden">
+                                    <section className='h-112 w-expand-sm'>
+                                        <ProductSwiper product={product} size="h-96" />
+
+                                    </section>
+                                </div>  
+                            </section>
+                        </article>
+                    </article>
+                </article>
+            </section>
       )
     }
 }
