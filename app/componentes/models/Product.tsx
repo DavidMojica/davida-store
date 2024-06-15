@@ -19,23 +19,34 @@ export class PresentationProduct{
     }
 }
 
-export abstract class Product{
+export class Product{
+    private ID:number;
     protected Name:string;
     protected Description:string;
     protected Price:number;
     protected Images:string[];
     protected Available:boolean;
     protected Category:string;
+    private Size:string;
+    private Color:string;
+    private Material:string;
 
-    constructor(name:string, description:string, price:number, Category:string, images:string[], available:boolean){
+    constructor(id:number, name:string, description:string, price:number, Category:string, images:string[], available:boolean, size:string, color:string, material:string){
+        this.ID = id;
         this.Name = name;
         this.Description = description;
         this.Price = price;
         this.Category = Category;
         this.Images = images;
         this.Available = available;
+        this.Size = size;
+        this.Color = color;
+        this.Material = material;
     }
     //-------------Getters-------------//
+    public getID():number{
+        return this.ID;
+    }
     public getName():string{
         return this.Name;
     }
@@ -54,19 +65,6 @@ export abstract class Product{
     public getAvailable():boolean{
         return this.Available;
     }
-}
-
-export class Clothing extends Product{ 
-    private Size:string;
-    private Color:string;
-    private Material:string;
-    constructor(name:string, description:string, price:number, type:string, images:string[], available:boolean, size:string, color:string, material:string){
-        super(name, description, price, type, images, available);
-        this.Size = size;
-        this.Color = color;
-        this.Material = material;
-    }
-    //-------------Getters-------------//
     public getSize():string{
         return this.Size;
     }

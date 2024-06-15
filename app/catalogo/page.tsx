@@ -2,12 +2,12 @@
 import React from 'react';
 import Header from '../componentes/header';
 import Footer from '../componentes/footer';
-import { Clothing } from '../componentes/models/Product';
+import { Product } from '../componentes/models/Product';
 import CardFactory from '../componentes/CardFactory';
 
 const Catalogo = () => {
   // Clothing
-  const BlusaCuadros_1 = new Clothing('Blusa Casual','Blusa de cuadros casual con solapa y botones de marga larga con estampado de Patchwork', 
+  const BlusaCuadros_1 = new Product(0,'Blusa de cuadros','Blusa de cuadros casual con solapa y botones de marga larga con estampado de Patchwork', 
                                       65000, 'ropa', ['ropa_1_1.jpeg', 'ropa_1_2.jpeg', 'ropa_1_3.jpeg'], true, 'M', 'Vino/Azul/Amarillo','Tela');
 
 
@@ -31,7 +31,7 @@ const Catalogo = () => {
           </select>
         </section> */}
 
-        <section>
+        <section className='pt-12 pb-20'>
             <CardFactory.ClothingCard size='h-112 w-80' product={BlusaCuadros_1} />
         </section>
 

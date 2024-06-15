@@ -4,12 +4,12 @@ import '../styles/magic_card.css';
 import ButtonFactory from './ButtonFactory';
 import Atropos from 'atropos';
 import Link from 'next/link';
-import { Clothing } from './models/Product';
-import ProductSwiper from './ProductSwiper';
+import { Product } from './models/Product';
+import ClothingSwiper from './ProductSwiper';
 
-interface ClothingCardProps{
+interface ProductCardProps{
     size:string,
-    product:Clothing;
+    product:Product;
 }
 
 interface PresentationProductProps{
@@ -19,6 +19,8 @@ interface PresentationProductProps{
 }
 
 class CardFactory{
+    private static phoneNumber = '573136173932';
+    private static defaultMessage = 'Hola, estoy interesado en '
     //------------Card to introduce the product / Category----------//
     public static PresentationCard({size, product, margin}:PresentationProductProps):React.ReactNode{
         useEffect(() =>{
@@ -28,7 +30,6 @@ class CardFactory{
                     Atropos({
                         el: element,
                         activeOffset: 100,
-                        
                     });
                 }
             });
@@ -60,7 +61,7 @@ class CardFactory{
     }
 
     //------------Card to detail the product------------//
-    public static ClothingCard = ({size, product}:ClothingCardProps):React.ReactNode => {
+    public static ClothingCard = ({size, product}:ProductCardProps):React.ReactNode => {
         useEffect(() =>{
             const cardElements = document.querySelectorAll('.a-card');
             Array.prototype.forEach.call(cardElements, (element: Element) => {
@@ -68,23 +69,38 @@ class CardFactory{
                     Atropos({
                         el: element,
                         activeOffset: 100,
-                        
+                        highlight:true
                     });
                 }
             });
         }, []);
 
         return (
-            <section className={`a-card ${size} `} >
+            <section className={`a-card ${size}  `} >
                 <article className='atropos-scale'>
                     <article className='atropos-rotate'>
                         <article className='atropos-inner'>
                             <section className='card-magic '>
-                                <div className="card-magic-info overflow-hidden">
-                                    <section className='h-112 w-expand-sm'>
-                                        <ProductSwiper product={product} size="h-96" />
-
-                                    </section>
+                                <div className="card-magic-info overflow-hidden">  
+                                <section className='h-60'>
+                                    <ClothingSwiper product={product} size="h-60" />
+                                </section>
+                                <section className="p-4 bg-white rounded shadow-lg">
+                                    <h2 className="text-2xl font-bold mb-2" data-atropos-offset="5">{product.getName()}</h2>
+                                    <p className="text-sm text-gray-700 mb-4" data-atropos-offset="-4">{product.getDescription()}</p>
+                                    <p className="text-xl font-semibold text-blue-600 mb-2">${product.getPrice()}</p>
+                                    <article className="text-sm text-gray-600"  data-atropos-offset="-3">
+                                        <p><span className="font-semibold">Categoría:</span> {product.getCategory()}</p>
+                                        <p><span className="font-semibold">Talla:</span> {product.getSize()}</p>
+                                        <p><span className="font-semibold">Color:</span> {product.getColor()}</p>
+                                        <p><span className="font-semibold">Material:</span> {product.getMaterial()}</p>
+                                    </article>
+                                    <article data-atropos-offset="3">
+                                        <a href={`https://wa.me/${this.phoneNumber}?text=${encodeURIComponent(`${this.defaultMessage} ${product.getName()}`)}`} target='_blanck' rel='noopener noreferrer'>
+                                            <ButtonFactory.SpaceButton margin='mt-4 mb-2' size='h-12 w-full' text='Comprar' />
+                                        </a>
+                                    </article>
+                                </section>
                                 </div>  
                             </section>
                         </article>
@@ -94,5 +110,7 @@ class CardFactory{
       )
     }
 }
+
+
 
 export default CardFactory;

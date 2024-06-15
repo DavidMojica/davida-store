@@ -3,32 +3,28 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { Clothing} from './models/Product';
+import { Product } from './models/Product';
 
-interface ClothingSwiperProps {
+interface ProductSwiperProps {
   size:string,
-  product:Clothing;
+  product:Product;
 }
 
-const ClothingSwiper: FC<ClothingSwiperProps> = ({ product, size }:ClothingSwiperProps) => {
-  const isAvailable = product.getAvailable();
-
+const ClothingSwiper: FC<ProductSwiperProps> = ({ product, size }) => {
   return (
-    <Swiper pagination={true} modules={[Pagination]} className={`mySwiper ${size}`}>
-      <section className={`bg-opacity-35 p-4 ${isAvailable ? 'bg-green-500' : 'bg-red-500'}`}>
-      <p className="text-white text-xl font-bold">
-        {isAvailable ? 'Disponible' : 'No disponible'}
-      </p>
-    </section>
-      {product.getImages().map((url, index) => (
-        <SwiperSlide key={index}>
-          
-
-          <img src={url} alt={`Slide ${index + 1}`} className="w-full h-auto" />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+      <Swiper pagination={true} modules={[Pagination]} className={`mySwiper ${size}`}>
+          {product.getImages().map((url, index) => (
+              <SwiperSlide key={index}>
+                  <div className="relative">
+                      <img src={url} alt={`Slide ${index + 1}`} className="w-full h-60 object-cover" />
+                      <div className={`absolute top-2 left-2 px-2 py-1 text-white text-xs font-bold rounded ${product.getAvailable() ? 'bg-green-500' : 'bg-red-500'}`}>
+                          {product.getAvailable() ? 'Disponible' : 'No disponible'}
+                      </div>
+                  </div>
+              </SwiperSlide>
+          ))}
+      </Swiper>
   );
-}
+};
 
 export default ClothingSwiper;
