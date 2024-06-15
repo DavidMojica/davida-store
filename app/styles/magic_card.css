@@ -6,6 +6,7 @@
     background: var(--background);
     position: relative;
     z-index: 1;
+    color: #f7ba2b;
    }
    
    .card-magic::after {
@@ -37,9 +38,5 @@
    .card-magic:hover::after {
     opacity: 0;
    }
-   
-   .card-magic:hover .card-magic-info {
-    color: #f7ba2b;
-    transition: color 1s;
-   }
+
    
