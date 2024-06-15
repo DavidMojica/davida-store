@@ -82,7 +82,7 @@ class CardFactory{
                         <article className='atropos-inner'>
                             <section className='card-magic '>
                                 <div className="card-magic-info overflow-hidden">  
-                                <section className='h-60'>
+                                <section className=''>
                                     <ClothingSwiper product={product} size="h-60" />
                                 </section>
                                 <section className="p-4 bg-white rounded shadow-lg">
@@ -90,13 +90,14 @@ class CardFactory{
                                     <p className="text-sm text-gray-700 mb-4" data-atropos-offset="-4">{product.getDescription()}</p>
                                     <p className="text-xl font-semibold text-blue-600 mb-2">${product.getPrice()}</p>
                                     <article className="text-sm text-gray-600"  data-atropos-offset="-3">
+                                        <p><span className="font-semibold">ID del producto:</span> {product.getID()}</p>
                                         <p><span className="font-semibold">Categoría:</span> {product.getCategory()}</p>
                                         <p><span className="font-semibold">Talla:</span> {product.getSize()}</p>
                                         <p><span className="font-semibold">Color:</span> {product.getColor()}</p>
                                         <p><span className="font-semibold">Material:</span> {product.getMaterial()}</p>
                                     </article>
                                     <article data-atropos-offset="3">
-                                        <a href={`https://wa.me/${this.phoneNumber}?text=${encodeURIComponent(`${this.defaultMessage} ${product.getName()}`)}`} target='_blanck' rel='noopener noreferrer'>
+                                        <a href={`https://wa.me/${this.phoneNumber}?text=${encodeURIComponent(`${this.defaultMessage} ${product.getName()} ID ${product.getID()}`)}`} target='_blank' rel='noopener noreferrer'>
                                             <ButtonFactory.SpaceButton margin='mt-4 mb-2' size='h-12 w-full' text='Comprar' />
                                         </a>
                                     </article>
