@@ -7,6 +7,7 @@ import ButtonFactory from "./componentes/ButtonFactory";
 import CardFactory from "./componentes/CardFactory";
 import { PresentationProduct } from "./componentes/models/Product";
 import TextRotator from "./componentes/TextRotator";
+import Link from "next/link";
 
 
 export default function Home():React.JSX.Element {
@@ -45,7 +46,9 @@ export default function Home():React.JSX.Element {
               <TextRotator.RainbowTextRotator />
             </article>
             <article className="block items-center md:flex justify-center pb-2 pt-4">
-              <ButtonFactory.SpaceButton text="Catálogo" size="h-12 w-48" margin="m-auto md:mx-2 my-2 md:my-0"  />
+              <Link href={'/catalogo'}>
+                <ButtonFactory.SpaceButton text="Catálogo" size="h-12 w-48" margin="m-auto md:mx-2 my-2 md:my-0"  />
+              </Link>
               <ButtonFactory.SpaceButton text="Contáctenos" size="h-12 w-48" margin="m-auto md:mx-2 my-2 md:my-0" />
             </article>
         </section>

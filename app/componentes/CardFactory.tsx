@@ -94,11 +94,10 @@ class CardFactory{
                                         <p><span className="font-semibold">Categoría:</span> {product.getCategory()}</p>
                                         <p><span className="font-semibold">Talla:</span> {product.getSize()}</p>
                                         <p><span className="font-semibold">Color:</span> {product.getColor()}</p>
-                                        <p><span className="font-semibold">Material:</span> {product.getMaterial()}</p>
                                     </article>
                                     <article data-atropos-offset="3">
                                         <a href={`https://wa.me/${this.phoneNumber}?text=${encodeURIComponent(`${this.defaultMessage} ${product.getName()} ID ${product.getID()}`)}`} target='_blank' rel='noopener noreferrer'>
-                                            <ButtonFactory.SpaceButton margin='mt-4 mb-2' size='h-12 w-full' text='Comprar' />
+                                            <ButtonFactory.BlankButton margin='mt-4 mb-2' size='h-12 w-full' text='Comprar' />
                                         </a>
                                     </article>
                                 </section>
