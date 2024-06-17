@@ -2,7 +2,6 @@
 import Header from "./componentes/header";
 import Footer from "./componentes/footer";
 import IconFactory from "./componentes/IconFactory";
-import TextFactory from "./componentes/TextFactory";
 import ButtonFactory from "./componentes/ButtonFactory";
 import CardFactory from "./componentes/CardFactory";
 import { PresentationProduct } from "./componentes/models/Product";
@@ -14,7 +13,7 @@ export default function Home():React.JSX.Element {
   //---------Instancias de productos de presentacion---------//
   const ptt_RopaDama = new PresentationProduct('ptt_ropadama.jpeg', '','ropa');
   const ptt_Accesorios = new PresentationProduct('ptt_accesorios.jpeg', '', 'accesorios');
-  const ptt_Tecnologia = new PresentationProduct('ptt_tecnologia.jpg', '', 'tecnología');
+  const ptt_Tecnologia = new PresentationProduct('ptt_tecnologia.jpg', '', 'tecnologia');
   const ptt_Otros = new PresentationProduct('ptt_otros.jpg', '', 'otros');
 
 
@@ -49,7 +48,7 @@ export default function Home():React.JSX.Element {
               <Link href={'/catalogo'}>
                 <ButtonFactory.SpaceButton text="Catálogo" size="h-12 w-48" margin="m-auto md:mx-2 my-2 md:my-0"  />
               </Link>
-              <ButtonFactory.SpaceButton text="Contáctenos" size="h-12 w-48" margin="m-auto md:mx-2 my-2 md:my-0" />
+              {/* <ButtonFactory.SpaceButton text="Contáctenos" size="h-12 w-48" margin="m-auto md:mx-2 my-2 md:my-0" /> */}
             </article>
         </section>
         {/* Productos seleccionados aleatoriamente */}

@@ -24,6 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className="dark">
+      <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       <body className={`${Libre_Franklin_init.variable} dark:bg-black bg-white bg-[linear-gradient(to_right,#33333345_1px,transparent_1px),linear-gradient(to_bottom,#33333345_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#80808025_1px,transparent_1px),linear-gradient(to_bottom,#80808025_1px,transparent_1px)] bg-[size:88px_88px] sm:w-full md:w-4/5 m-auto`}>
         {children}
       </body>

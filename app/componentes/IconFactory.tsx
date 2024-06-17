@@ -9,7 +9,7 @@ class IconFactory{
     public static Whatsapp({size, padding}:IconProps):React.ReactNode{
         return(
             <>
-                <FaWhatsapp className={`${size} ${padding} bg-green-600 rounded-full hover:bg-white hover:text-green-600 duration-300'`} />
+                <FaWhatsapp className={`${size} ${padding} bg-green-600 rounded-full hover:bg-white hover:text-green-600 duration-300`} />
             </>
         )
     }

@@ -39,18 +39,29 @@ const ropa_15 = new Product(16, 'Camiseta estampada', 'Camiseta blusa cuello etn
   99999, 'ropa', ['ropa_15_1.jpeg','ropa_15_2.jpeg','ropa_15_3.jpeg'], false, 'MX', 'Azul');
 // Accesorios
 const accesorio_1 = new Product(3, 'Pulseras 4 piezas', 'Conjunto de pulseras 4pc de moda boehemia con borlas y colgante de arbol de la vida para hombres y dama',
-  40000, 'accesorios',  ['accesorio_1_1.jpeg', 'accesorio_1_2.jpeg', 'accesorio_1_3.jpeg', 'accesorio_1_4.jpeg', 'accesorio_1_5.jpeg'], true, '-', 'Varios');
+  20000, 'accesorios',  ['accesorio_1_1.jpeg'], true, '-', 'Varios');
+const accesorio_2 = new Product(19, 'Pulseras 4 piezas', 'Conjunto de pulseras 4pc de moda boehemia con borlas y colgante de arbol de la vida para hombres y dama',
+  20000, 'accesorios',  ['accesorio_1_2.jpeg'], true, '-', 'Varios');
+const accesorio_3 = new Product(20, 'Pulseras 4 piezas', 'Conjunto de pulseras 4pc de moda boehemia con borlas y colgante de arbol de la vida para hombres y dama',
+  20000, 'accesorios',  ['accesorio_1_3.jpeg'], true, '-', 'Varios');
 
-const accesorio_2 = new Product(4, 'Reloj Madera', 'Reloj de madera con esfera de flores de moda cuarzo digital vintage eleccion para regalos y detalles',
+const accesorio_4 = new Product(4, 'Reloj Madera', 'Reloj de madera con esfera de flores de moda cuarzo digital vintage eleccion para regalos y detalles',
       45000, 'accesorios', ['accesorio_2_1.jpeg'], true, '-','Varios');
+// tec
+const tecnologia_1 = new Product (17, 'Drone con camara', 'Drone con camara, toma fotos y video. 1080p HD, regalo perfecto.',
+  215000, 'tecnologia', ['tec_1_1.jpg','tec_1_2.jpg','tec_1_3.jpg','tec_1_4.jpg','tec_1_5.jpg',], true, '-','Negro');
+//otros
+const otros_1 = new Product (18, 'Gafas pixeladas', 'Perfecto para fiestas o para pasar el rato con tus amigos.',
+  15000, 'otros',['otro_1_1.jpg','otro_1_2.jpg','otro_1_3.png'], true, '-', 'Negro')
+
 
 //-----------Lista de productos-------------//
-const products:Product[] = [ropa_1,ropa_2, ropa_3, ropa_4, ropa_5, ropa_6,ropa_7,ropa_8,ropa_9,ropa_10,ropa_11,ropa_12,ropa_13,ropa_14,ropa_15, accesorio_1, accesorio_2]; 
+const products:Product[] = [ropa_1,ropa_2, ropa_3, ropa_4, ropa_5, ropa_6,ropa_7,ropa_8,ropa_9,ropa_10,ropa_11,ropa_12,ropa_13,ropa_14,ropa_15, accesorio_1, accesorio_2, accesorio_3, accesorio_4, tecnologia_1, otros_1]; 
 
 
 const Catalogo = () => {
   const searchParams = useSearchParams();
-  const initialCategory = searchParams.get('category') || ''; // Get initial category from URL
+  const initialCategory = searchParams.get('category') || ''; 
   const [selectedCategory, setSelectedCategory] = useState(initialCategory);
 
   useEffect(() => {
@@ -58,7 +69,7 @@ const Catalogo = () => {
     if (categoryFromUrl !== selectedCategory) {
       setSelectedCategory(categoryFromUrl);
     }
-  }, [searchParams]); // Update selectedCategory only when searchParams change
+  }, [searchParams]); 
 
   const handleCategoryChange = (event:any) => {
     setSelectedCategory(event.target.value);
@@ -72,18 +83,18 @@ const Catalogo = () => {
         <Header />
         <main className='bg-white dark:bg-black m-auto'>
           <section className="py-10 my-5 rounded-xl flex flex-col md:flex-row bg-cover bg-center" style={{ backgroundImage: "url('/cat_bg.jpg')" }}>
-            <article className="w-full md:w-1/2 bg-opacity-50 bg-gray-800 p-8">
+            <article className="w-full md:w-1/2 bg-opacity-50 bg-black p-8">
               <h4 className="text-xl font-bold text-white">Tienda Online de Variedades</h4>
-              <h1 className="text-3xl md:text-6xl lg:text-8xl font-bold text-white mt-2 mb-6">Catálogo virtual</h1>
+              <h1 className="text-3xl md:text-6xl lg:text-6xl font-bold text-white mt-2 mb-6">Catálogo virtual</h1>
               <p className="text-xl font-bold text-white">Davida Store ofrece una amplia gama de prendas y productos variados para todos los gustos y edades.</p>
             </article>
             <article className="w-full md:w-1/2"></article>
           </section>
 
 
-          <section>
-            <select name="f_type" id="f_type" className='text-black' onChange={handleCategoryChange}>
-              <option value="">Seleccione tipo</option>
+          <section className='py-6'>
+            <select name="f_type" id="f_type" className='mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500' onChange={handleCategoryChange}>
+              <option value="">Filtra por categoría</option>
               <option value="ropa">Ropa</option>
               <option value="accesorios">Accesorios</option>
               <option value="tecnologia">Tecnología</option>
@@ -91,7 +102,7 @@ const Catalogo = () => {
             </select>
           </section>
 
-          <section className='flex flex-wrap justify-evenly h-auto py-12'>
+          <section className='flex flex-wrap justify-evenly h-auto py-6'>
                 {filteredProducts.map(product => (
                   <CardFactory.ClothingCard key={product.getID()} size='w-80 mx-2 my-2' product={product} />
                 ))}
