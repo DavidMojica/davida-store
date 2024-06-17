@@ -60,6 +60,7 @@ const otros_1 = new Product (18, 'Gafas pixeladas', 'Perfecto para fiestas o par
 const products:Product[] = [ropa_1,ropa_2, ropa_3, ropa_4, ropa_5, ropa_6,ropa_7,ropa_8,ropa_9,ropa_10,ropa_11,ropa_12,ropa_13,ropa_14,ropa_15, accesorio_1, accesorio_2, accesorio_3, accesorio_4, tecnologia_1, otros_1]; 
 
 
+
 const Catalogo = () => {
   const searchParams = useSearchParams();
   const initialCategory = searchParams.get('category') || ''; 
