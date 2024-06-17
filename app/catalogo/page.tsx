@@ -1,10 +1,11 @@
 'use client';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Suspense } from 'react';
 import Header from '../componentes/header';
 import Footer from '../componentes/footer';
 import { Product } from '../componentes/models/Product';
 import CardFactory from '../componentes/CardFactory';
 import { useSearchParams } from 'next/navigation';
+
 
 // Clothing
 const ropa_1 = new Product(0,'Blusa de cuadros','Blusa de cuadros casual con solapa y botones de marga larga con estampado de Patchwork', 
@@ -79,7 +80,7 @@ const Catalogo = () => {
     ? products.filter(product => product.getCategory() === selectedCategory)
     : products;
   return (
-    <>
+    <Suspense>
         <Header />
         <main className='bg-white dark:bg-black m-auto'>
           <section className="py-10 my-5 rounded-xl flex flex-col md:flex-row bg-cover bg-center" style={{ backgroundImage: "url('/cat_bg.jpg')" }}>
@@ -110,7 +111,7 @@ const Catalogo = () => {
         </main>
 
         <Footer />
-    </>
+    </Suspense>
   )
 }
 
