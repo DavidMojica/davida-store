@@ -10,10 +10,9 @@ const Header = ():React.JSX.Element => {
         </section>
         <section className='sm:col-span-1 md:col-span-2 flex items-center'>
             <ul className='sm:block md:flex text-center'>
-                <li><Link href={'/'} className='text-black dark:text-white mx-2 font-medium duration-300 text-lg md:text-2xl transition-all ease-in-out hover:underline hover:decoration-red-700 hover:text-red-700 dark:hover:decoration-red-900 dark:hover:text-red-900 hover:underline-offset-4'>Home</Link></li>
-                <li><Link href={'/catalogo'} className='text-black dark:text-white mx-2 font-medium duration-300 text-lg md:text-2xl transition-all ease-in-out hover:underline hover:decoration-red-700 hover:text-red-700 dark:hover:decoration-red-900 dark:hover:text-red-900 hover:underline-offset-4'>Catálogo</Link></li>
-                <li><Link href={'/'} className='text-black dark:text-white mx-2 font-medium duration-300 text-lg md:text-2xl transition-all ease-in-out hover:underline hover:decoration-red-700 hover:text-red-700 dark:hover:decoration-red-900 dark:hover:text-red-900 hover:underline-offset-4'>Conócenos</Link></li>
-                <li><Link href={'/'} className='text-black dark:text-white ml-2 mr-4 font-medium duration-300 text-lg md:text-2xl transition-all ease-in-out hover:underline hover:decoration-red-700 hover:text-red-700 dark:hover:decoration-red-900 dark:hover:text-red-900 hover:underline-offset-4'>Contáctenos</Link></li>
+                <li><Link href={'/'} className='text-black dark:text-white mx-2 font-medium duration-300 text-2xl transition-all ease-in-out hover:underline hover:decoration-red-700 hover:text-red-700 dark:hover:decoration-red-900 dark:hover:text-red-900 hover:underline-offset-4'>Home</Link></li>
+                <li><Link href={'/catalogo'} className='mr-4 text-black dark:text-white mx-2 font-medium duration-300 text-2xl transition-all ease-in-out hover:underline hover:decoration-red-700 hover:text-red-700 dark:hover:decoration-red-900 dark:hover:text-red-900 hover:underline-offset-4'>Catálogo</Link></li>
+                {/* <li><Link href={'/'} className='text-black dark:text-white ml-2 mr-4 font-medium duration-300 text-lg md:text-2xl transition-all ease-in-out hover:underline hover:decoration-red-700 hover:text-red-700 dark:hover:decoration-red-900 dark:hover:text-red-900 hover:underline-offset-4'>Contáctenos</Link></li> */}
             </ul>
             <article className='hidden md:block'>
                 <Switch_day />

@@ -1,18 +1,13 @@
 export class PresentationProduct{
     private PresentationImageUrl:string;
-    private LinkString:string;
     private Category:string;
     constructor(presentationImageLink:string, linkString:string, category:string){
         this.PresentationImageUrl=presentationImageLink;
-        this.LinkString=linkString;
         this.Category=category;
     }
     //-------------Getters-------------//
     getPresentationImageUrl():string{
         return this.PresentationImageUrl;
-    }
-    getLinkString():string{
-        return this.LinkString;
     }
     getCategory():string{
         return this.Category;
