@@ -80,7 +80,7 @@ const Catalogo = () => {
     ? products.filter(product => product.getCategory() === selectedCategory)
     : products;
   return (
-    <Suspense>
+    <Suspense fallback={<article>Cargando...</article>}>
         <Header />
         <main className='bg-white dark:bg-black m-auto'>
           <section className="py-10 my-5 rounded-xl flex flex-col md:flex-row bg-cover bg-center" style={{ backgroundImage: "url('/cat_bg.jpg')" }}>
