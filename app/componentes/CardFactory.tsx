@@ -6,6 +6,7 @@ import Atropos from 'atropos';
 import Link from 'next/link';
 import { Product } from './models/Product';
 import ClothingSwiper from './ProductSwiper';
+import { useRouter } from 'next/router';
 
 interface ProductCardProps{
     size:string,
@@ -46,7 +47,7 @@ class CardFactory{
                                     <section className='h-97 relative w-expand-sm'>
                                         <img src={`${product.getPresentationImageUrl()}`} alt="example_image" className='absolute -top-3 -left-3 w-expand-sm h-expand-md rounded-b-lg' data-atropos-offset="3.1" />
                                         <div className='absolute bottom-4 mx-auto left-1/2 transform -translate-x-1/2'>
-                                            <Link href={`${product.getLinkString()}`}>
+                                            <Link href={`/catalogo?category=${product.getCategory()}`}>
                                                 <ButtonFactory.BlankButton text={`${product.getCategory()}`} margin='m-0' size='h-8 w-48' />
                                             </Link>
                                         </div>

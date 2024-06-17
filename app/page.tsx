@@ -12,10 +12,10 @@ import Link from "next/link";
 
 export default function Home():React.JSX.Element {
   //---------Instancias de productos de presentacion---------//
-  const ptt_RopaDama = new PresentationProduct('ptt_ropadama.jpeg', '','Ropa de dama');
-  const ptt_Accesorios = new PresentationProduct('ptt_accesorios.jpeg', '', 'Accesorios');
-  const ptt_Tecnologia = new PresentationProduct('ptt_tecnologia.jpg', '', 'Tecnología');
-  const ptt_Otros = new PresentationProduct('ptt_otros.jpg', '', 'Otros...');
+  const ptt_RopaDama = new PresentationProduct('ptt_ropadama.jpeg', '','ropa');
+  const ptt_Accesorios = new PresentationProduct('ptt_accesorios.jpeg', '', 'accesorios');
+  const ptt_Tecnologia = new PresentationProduct('ptt_tecnologia.jpg', '', 'tecnología');
+  const ptt_Otros = new PresentationProduct('ptt_otros.jpg', '', 'otros');
 
 
   return (
@@ -58,8 +58,6 @@ export default function Home():React.JSX.Element {
           <CardFactory.PresentationCard size="md:h-112 w-80" margin="px-2 py-4" product={ptt_Accesorios} />
           <CardFactory.PresentationCard size="md:h-112 w-80" margin="px-2 py-4" product={ptt_Tecnologia} />
           <CardFactory.PresentationCard size="md:h-112 w-80" margin="px-2 py-4" product={ptt_Otros} />
-
-
         </section>
       </main>
       <Footer />
