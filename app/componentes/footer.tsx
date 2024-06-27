@@ -29,7 +29,8 @@ const Footer = ():React.JSX.Element => {
                     ¡También somos empresa de desarrollo! <br />
                     <a href="https://wa.me/573197750000" target='_blank' className='text-red-700 hover:text-red-900 dark:text-red-900 dark:hover:text-red-700'>
                         Cotice sus sitos web con nosotros 
-                    </a>
+                    </a> <br />
+                    impresos.davida@gmail.com
                 </p>
             </article>
         </section>

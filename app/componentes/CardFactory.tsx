@@ -93,11 +93,16 @@ class CardFactory{
                                 </section>
                                 <section className="p-4 bg-white rounded shadow-lg">
                                     <h2 className="text-2xl font-bold mb-2 text-yellow-500" data-atropos-offset="5">{product.getName()}</h2>
-                                    <p className="text-sm text-gray-700 mb-4" data-atropos-offset="-4">{product.getDescription()}</p>
+                                    <p className="text-sm text-gray-700" data-atropos-offset="-4">{product.getDescription()}</p>
+    
+                                    <blockquote className='text-sm my-2 font-extrabold text-center text-yellow-500'>
+                                        <small className='text-wrap uppercase'>{product.getQuote()}</small>
+                                    </blockquote>
+
                                     <p className="text-xl font-semibold text-yellow-500 mb-2">
                                         <span className='text-3xl font-bold'>$</span>
                                         <span className='text-5xl font-bold'>{formattedPrice().split('.')[0]}</span>.
-                                        <span className=''>{formattedPrice().split('.')[1]}</span>
+                                        <span className=''>{formattedPrice().split('.')[1]} (COP)</span>
 
                                     </p>
                                     <article className="text-sm text-gray-600"  data-atropos-offset="-3">
@@ -107,7 +112,7 @@ class CardFactory{
                                     </article>
                                     <article data-atropos-offset="3">
                                         <a href={`https://wa.me/${this.phoneNumber}?text=${encodeURIComponent(`${this.defaultMessage} ${product.getName()} ID ${product.getID()}`)}`} target='_blank' rel='noopener noreferrer'>
-                                            <ButtonFactory.BlankButton margin='mt-4 mb-2' size='h-12 w-full' text='Comprar' />
+                                            <ButtonFactory.BlankButton margin='mt-4 mb-2' size='h-12 w-full' text='Lo quiero!' />
                                         </a>
                                     </article>
                                 </section>

@@ -24,8 +24,9 @@ export class Product{
     protected Category:string;
     private Size:string;
     private Color:string;
+    private Quote:string;
 
-    constructor(id:number, name:string, description:string, price:number, Category:string, images:string[], available:boolean, size:string, color:string){
+    constructor(id:number, name:string, description:string, price:number, Category:string, images:string[], available:boolean, size:string, color:string, quote:string){
         this.ID = id;
         this.Name = name;
         this.Description = description;
@@ -35,6 +36,7 @@ export class Product{
         this.Available = available;
         this.Size = size;
         this.Color = color;
+        this.Quote = quote;
     }
     //-------------Getters-------------//
     public getID():number{
@@ -63,6 +65,9 @@ export class Product{
     }
     public getColor():string{
         return this.Color;
+    }
+    public getQuote():string{
+        return this.Quote;
     }
 
 }
