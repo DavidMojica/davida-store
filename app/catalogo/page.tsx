@@ -50,9 +50,9 @@ const accesorio_4 = new Product(4, 'Reloj Madera', 'Reloj de madera con esfera d
       35000, 'accesorios', ['accesorio_2_1.jpeg'], true, '-','Varios','El estilo y el estado de ánimo es la autoexpresión de quien soy y como me siento.'); //45000
 //Bolsos
 const accesorio_5 = new Product(21,'Bolso de viaje Negro', 'Bolso con cargador para celulares y gran capacidad, cómodo diseñado para viajes largos.',
-  0, 'accesorios', ['accesorio_3_1.jpg','accesorio_3_2.jpg','accesorio_3_3.jpg','accesorio_3_4.jpg','accesorio_3_5.jpg','accesorio_3_6.jpg'], false, '-', 'Negro', 'La gratificación de la sensación de comodidad y estilo.')
-const accesorio_6 = new Product(21,'Bolso de viaje Gris', 'Bolso con cargador para celulares y gran capacidad, cómodo diseñado para viajes largos.',
-  0, 'accesorios', ['accesorio_4_1.jpg','accesorio_4_2.jpg','accesorio_4_3.jpg','accesorio_4_4.jpg','accesorio_4_5.jpg','accesorio_4_6.jpg'], false, '-', 'Gris', 'Fuerza y poder en los colores.')
+  249000, 'accesorios', ['accesorio_3_1.jpg','accesorio_3_2.jpg','accesorio_3_3.jpg','accesorio_3_4.jpg','accesorio_3_5.jpg','accesorio_3_6.jpg'], true, '-', 'Negro', 'La gratificación de la sensación de comodidad y estilo.')
+const accesorio_6 = new Product(22,'Bolso de viaje Gris', 'Bolso con cargador para celulares y gran capacidad, cómodo diseñado para viajes largos.',
+  249000, 'accesorios', ['accesorio_4_1.jpg','accesorio_4_2.jpg','accesorio_4_3.jpg','accesorio_4_4.jpg','accesorio_4_5.jpg','accesorio_4_6.jpg'], true, '-', 'Gris', 'Fuerza y poder en los colores.')
 
 // tec
 const tecnologia_1 = new Product (17, 'Drone con camara', 'Drone con camara, toma fotos y video. 1080p HD, regalo perfecto.',

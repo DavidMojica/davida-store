@@ -101,7 +101,7 @@ class CardFactory{
 
                                     <p className="text-xl font-semibold text-yellow-500 mb-2">
                                         <span className='text-3xl font-bold'>$</span>
-                                        <span className='text-5xl font-bold'>{formattedPrice().split('.')[0]}</span>.
+                                        <span className='text-4xl font-bold'>{formattedPrice().split('.')[0]}</span>.
                                         <span className=''>{formattedPrice().split('.')[1]} (COP)</span>
 
                                     </p>

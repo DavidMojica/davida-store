@@ -8,7 +8,7 @@ const Footer = ():React.JSX.Element => {
     <footer className='bg-white dark:bg-black p-4'>
         <section className='text-center'>
             <p className='font-bold text-sm md:text-xl flex-wrap w-4/5 md:w-1/2 m-auto text-black dark:text-white'>
-                Hola a todos! Somos una tienda virtual de productos varios con envío a toda Colombia. Esperamos que les gusten nuestros productos.
+                Somos una tienda virtual de productos varios con envío a toda Colombia.
             </p>
         </section>
         <section className='md:flex md:justify-evenly mt-4'>
