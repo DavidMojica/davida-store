@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
-import { PresentationProduct } from './models/Product';
+import { PresentationProduct } from '../models/Product';
 import '../styles/magic_card.css';
 import ButtonFactory from './ButtonFactory';
 import Atropos from 'atropos';
 import Link from 'next/link';
-import { Product } from './models/Product';
+import { Product } from '../models/Product';
 import ClothingSwiper from './ProductSwiper';
-import { useRouter } from 'next/router';
 
 interface ProductCardProps{
     size:string,
