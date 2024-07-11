@@ -4,7 +4,7 @@ import Footer from "./componentes/footer";
 import IconFactory from "./componentes/IconFactory";
 import ButtonFactory from "./componentes/ButtonFactory";
 import CardFactory from "./componentes/CardFactory";
-import { PresentationProduct } from "./componentes/models/Product";
+import { PresentationProduct } from "./models/Product";
 import TextRotator from "./componentes/TextRotator";
 import Link from "next/link";
 
