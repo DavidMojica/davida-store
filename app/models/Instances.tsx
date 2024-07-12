@@ -42,7 +42,7 @@ const accesorio_2 = new Product(19, 'Pulseras 4 piezas', 'Conjunto de pulseras 4
 const accesorio_3 = new Product(20, 'Pulseras 4 piezas', 'Conjunto de pulseras 4pc de moda boehemia con borlas y colgante de arbol de la vida para hombres y dama',
     20000, 'accesorios', ['accesorio_1_3.jpeg'], true, '-', 'Varios', 'Fuerza y poder en los colores.');
 
-const accesorio_4 = new Product(4, 'Reloj Madera', 'Reloj de madera con esfera de flores de moda cuarzo digital vintage eleccion para regalos y detalles',
+const accesorio_4 = new Product(4, 'Reloj color Madera', 'Reloj color madera con esfera de flores de moda cuarzo digital vintage eleccion para regalos y detalles',
     35000, 'accesorios', ['accesorio_2_1.jpeg'], true, '-', 'Varios', 'El estilo y el estado de ánimo es la autoexpresión de quien soy y como me siento.'); //45000
 //Bolsos
 const accesorio_5 = new Product(21, 'Bolso de viaje Negro', 'Bolso con cargador para celulares y gran capacidad, cómodo diseñado para viajes largos.',
