@@ -75,10 +75,7 @@ class CardFactory{
             });
         }, []);
 
-        const formattedPrice = () => {
-            const price = product.getPrice();
-            return price.toLocaleString('es-ES');
-          };
+        
 
         return (
             <section className={`a-card ${size}  `} >
@@ -98,12 +95,6 @@ class CardFactory{
                                         <small className='text-wrap uppercase'>{product.getQuote()}</small>
                                     </blockquote>
 
-                                    <p className="text-xl font-semibold text-yellow-500 mb-2">
-                                        <span className='text-3xl font-bold'>$</span>
-                                        <span className='text-4xl font-bold'>{formattedPrice().split('.')[0]}</span>.
-                                        <span className=''>{formattedPrice().split('.')[1]} (COP)</span>
-
-                                    </p>
                                     <article className="text-sm text-gray-600"  data-atropos-offset="-3">
                                         <p><span className="font-semibold">Talla:</span> {product.getSize()}</p>
                                         <p><span className="font-semibold">Color:</span> {product.getColor()}</p>
