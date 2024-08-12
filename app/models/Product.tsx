@@ -18,7 +18,6 @@ export class Product{
     private ID:number;
     protected Name:string;
     protected Description:string;
-    protected Price:number;
     protected Images:string[];
     protected Available:boolean;
     protected Category:string;
@@ -26,11 +25,10 @@ export class Product{
     private Color:string;
     private Quote:string;
 
-    constructor(id:number, name:string, description:string, price:number, Category:string, images:string[], available:boolean, size:string, color:string, quote:string){
+    constructor(id:number, name:string, description:string,  Category:string, images:string[], available:boolean, size:string, color:string, quote:string){
         this.ID = id;
         this.Name = name;
         this.Description = description;
-        this.Price = price;
         this.Category = Category;
         this.Images = images;
         this.Available = available;
@@ -48,9 +46,7 @@ export class Product{
     public getDescription():string{
         return this.Description;
     }
-    public getPrice():number{
-        return this.Price;
-    }
+
     public getCategory():string{
         return this.Category;
     }
